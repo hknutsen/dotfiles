@@ -1,0 +1,16 @@
+# https://github.com/hknutsen/dotfiles
+
+[user]
+	name = Henrik Knutsen
+	email = 46495473+hknutsen@users.noreply.github.com
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[core]
+	autocrlf = input
+	editor = code --wait
