@@ -4,7 +4,10 @@ set -eu
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-dotfiles=$(ls -A dotfiles)
+dotfiles=${1:-""}
+if [[ -z "$dotfiles" ]]; then
+  dotfiles=$(ls -A dotfiles)
+fi
 
 for f in $dotfiles; do
   read -r -p "Copy dotfile $f to home? (Y/n) " response
