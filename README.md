@@ -1,6 +1,6 @@
 # Henrik's dotfiles
 
-Contains my dotfiles and a bootstrap script to copy them from this repository to my home directory.
+Contains my [dotfiles](https://dotfiles.github.io) and a bootstrap script to copy them from this repository to my home directory.
 
 ## Usage
 
