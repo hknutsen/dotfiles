@@ -16,6 +16,12 @@ Contains my [dotfiles](https://dotfiles.github.io) and a bootstrap script to cop
     ./bootstrap.sh
     ```
 
+    Run the bootstrap script without confirmation:
+
+    ```bash
+    ./bootstrap.sh -f
+    ```
+
     Copy a single given dotfile:
 
     ```bash
