@@ -22,12 +22,20 @@ if [[ $# -eq 0 ]]; then
 else
   dotfiles=("$@")
 fi
-echo "Dotfiles:"
+echo "Selected dotfiles:"
 echo "${dotfiles[@]}"
 echo ""
 
+# Verify that selected dotfiles exist:
+for file in "${dotfiles[@]}"; do
+  if [[ ! -f "dotfiles/$file" ]]; then
+    echo "$file does not exist in this repo"
+    exit 1
+  fi
+done
+
 if [[ "$confirm" == true ]]; then
-  read -r -p "Copy dotfiles to home? (y/N) " response
+  read -r -p "Copy selected dotfiles to home? (y/N) " response
   case $response in
     [yY][eE][sS]|[yY])
       ;;
