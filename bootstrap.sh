@@ -2,11 +2,11 @@
 
 set -eu
 
-force_copy=false
+confirm=true
 while getopts "f" opt; do
   case $opt in
     f)
-      force_copy=true
+      confirm=false
       ;;
     *)
       exit 1
@@ -17,13 +17,16 @@ shift $((OPTIND - 1))
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-dotfiles=${1:-""}
-if [[ -z "$dotfiles" ]]; then
-  dotfiles=$(ls -A dotfiles)
+if [[ $# -eq 0 ]]; then
+  mapfile -t dotfiles < <(ls -A dotfiles)
+else
+  dotfiles=("$@")
 fi
-echo -e "Dotfiles:\n$dotfiles\n"
+echo "Dotfiles:"
+echo "${dotfiles[@]}"
+echo ""
 
-if [[ "$force_copy" == false ]]; then
+if [[ "$confirm" == true ]]; then
   read -r -p "Copy dotfiles to home? (y/N) " response
   case $response in
     [yY][eE][sS]|[yY])
@@ -35,7 +38,7 @@ if [[ "$force_copy" == false ]]; then
   esac
 fi
 
-for file in $dotfiles; do
+for file in "${dotfiles[@]}"; do
   echo "Copying $file to home"
   cp -r "dotfiles/$file" ~
 done
