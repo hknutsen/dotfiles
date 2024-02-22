@@ -15,3 +15,15 @@ Contains my [dotfiles](https://dotfiles.github.io) and a bootstrap script to cop
     ```bash
     ./bootstrap.sh
     ```
+
+    Copy a single given dotfile:
+
+    ```bash
+    ./bootstrap.sh file
+    ```
+
+    Copy multiple given dotfiles:
+
+    ```bash
+    ./bootstrap.sh "file1 file2 file3"
+    ```
