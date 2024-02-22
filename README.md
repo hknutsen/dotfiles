@@ -31,5 +31,11 @@ Contains my [dotfiles](https://dotfiles.github.io) and a bootstrap script to cop
     Copy multiple given dotfiles:
 
     ```bash
-    ./bootstrap.sh "file1 file2 file3"
+    ./bootstrap.sh file1 file2 file3
+    ```
+
+    Copy multiple given dotfiles without confirmation:
+
+    ```bash
+    ./bootstrap.sh -f file1 file2 file3
     ```
