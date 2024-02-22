@@ -8,15 +8,19 @@ dotfiles=${1:-""}
 if [[ -z "$dotfiles" ]]; then
   dotfiles=$(ls -A dotfiles)
 fi
+echo -e "Dotfiles:\n$dotfiles\n"
 
-for f in $dotfiles; do
-  read -r -p "Copy dotfile $f to home? (Y/n) " response
-  case $response in
-    [nN][oO]|[nN])
-      echo "Skipping $f"
-      ;;
-    *)
-      cp -r "dotfiles/$f" ~
-      ;;
-  esac
+read -r -p "Copy dotfiles to home? (y/N) " response
+case $response in
+  [yY][eE][sS]|[yY])
+    ;;
+  *)
+    echo "Exiting"
+    exit 0
+    ;;
+esac
+
+for file in $dotfiles; do
+  echo "Copying $file to home"
+  cp -r "dotfiles/$file" ~
 done
