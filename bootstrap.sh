@@ -18,7 +18,7 @@ shift $((OPTIND - 1))
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 if [[ $# -eq 0 ]]; then
-  mapfile -t dotfiles < <(ls -A dotfiles)
+  readarray -t dotfiles < <(ls -A dotfiles)
 else
   dotfiles=("$@")
 fi
