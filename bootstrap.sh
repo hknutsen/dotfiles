@@ -22,14 +22,14 @@ if [[ $# -eq 0 ]]; then
 else
   dotfiles=("$@")
 fi
-echo "Selected dotfiles:"
-echo "${dotfiles[@]}"
-echo ""
+printf "Selected dotfiles:\n"
+printf "%s\n" "${dotfiles[@]}"
+printf "\n"
 
 # Verify that selected dotfiles exist:
 for file in "${dotfiles[@]}"; do
   if [[ ! -f "dotfiles/$file" ]]; then
-    echo "$file does not exist in this repo"
+    printf "%s does not exist in this repo\n" "$file"
     exit 1
   fi
 done
@@ -40,13 +40,13 @@ if [[ "$confirm" == true ]]; then
     [yY][eE][sS]|[yY])
       ;;
     *)
-      echo "Exiting"
+      printf "Exiting\n"
       exit 0
       ;;
   esac
 fi
 
 for file in "${dotfiles[@]}"; do
-  echo "Copying $file to home"
+  printf "Copying %s to home\n" "$file"
   cp -r "dotfiles/$file" ~
 done
