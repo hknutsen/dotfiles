@@ -1,0 +1,120 @@
+[settings]
+columns = ~#track,title,artist,album,genre,date,~#length
+
+default_rating = 0.5
+scan = /mnt/Data/Music
+
+[memory]
+browser = CoverGrid
+chooser_dir = /mnt/Data
+column_expands = title,0,artist,0,album,0,genre,1,date,1
+
+column_widths = title,518,artist,333,album,357,genre,-1,date,-1
+
+download_cover_art_maximized = 0
+download_cover_art_position = 26 23
+download_cover_art_size_ = 1400 720
+open_browsers =
+plugin_cover_maximized = 0
+plugin_cover_position = 26 23
+plugin_cover_size_ = 800 550
+plugin_prefs_maximized = 0
+plugin_prefs_position = 26 23
+plugin_prefs_size_ = 750 705
+plugin_selection = Title Case
+prefs_page = library
+queue = False
+queue_disable = False
+queue_expanded = False
+queue_position = 0.7510729613733905
+quodlibet_information_maximized = 0
+quodlibet_information_position = 26 23
+quodlibet_information_size_ = 562 637
+quodlibet_last_active_version = 4.6.0
+quodlibet_maximized = 4
+quodlibet_position = 26 23
+quodlibet_properties_maximized = 0
+quodlibet_properties_pos = 0.35853976531942633
+quodlibet_properties_position = 26 23
+quodlibet_properties_size_ = 1317 746
+quodlibet_properties_size_single = 767 631
+quodlibet_size_ = 960 1011
+repeat = False
+seek = 378238
+sidebar_pos = 0.25
+song = /mnt/Data/Music/Slowdive - Slowdive/01-01 Slomo.flac
+sortby = 0~#track
+
+volume = 0.9999847412109375
+
+[player]
+gst_buffer = 3.0
+is_playing = False
+replaygain_mode = auto
+time_remaining = false
+
+[browsers]
+album_sort = 1
+album_text = true
+albumlist_pos = 0.4
+collectionbrowser_pos = 0.4
+covergrid = ('', ('the bends',), ('radiohead',))
+covergrid_all = false
+covergrid_pos = 0.5909090909090909
+equal_pane_width = true
+pane_mode = 0
+pane_selection = 0	Aurora	.
+	0	The Gods We Can Touch	.
+panedbrowser_pane_widths = 0.509375
+panedbrowser_pos = 0.40977443609022557
+panes = albumartist	album
+playlistsbrowser_pos = 0.4
+query_text =
+
+[__config__]
+version = 0
+
+[plugins]
+active_plugins = WaveformSeekBar
+	embedded_edit
+	Theme Switcher
+	refresh-songs
+	Title Case
+brainz_year_only = true
+cover_edit = False
+cover_edit_cmd = gimp
+cover_engine_discogs = True
+cover_filename = cover.jpg
+cover_fit = True
+cover_pos = 0.3620253164556962
+cover_resultsmax = 3
+cover_searchraw = False
+download_cover_art_preview_size = 600.0
+missing_query_include_empty = True
+notify_show_notifications = all
+quodlibet.fake.plugins.gajim_status_accounts =
+quodlibet.fake.plugins.gajim_status_pattern = <artist> - <title>
+quodlibet.fake.plugins.gajim_status_paused = True
+quodlibet.fake.plugins.gajim_status_statuses = online chat
+quodlibet.fake.plugins.visualisations_executable = projectM-pulseaudio
+quodlibet.fake.plugins.waveformseekbar_show_current_pos = False
+quodlibet.fake.plugins.waveformseekbar_show_time_labels = True
+randomalbum_use_weights = 0
+shufflebygrouping_grouping = ~grouping~album~albumartist
+shufflebygrouping_grouping_filter = grouping
+squeezebox_debug = False
+theme switcher_prefer_dark = false
+theme switcher_theme =
+titlecase_allow_all_caps = True
+titlecase_human_title_case = True
+
+[rename]
+diacriticals = false
+windows = true
+
+[tagsfrompath]
+titlecase = false
+
+[editing]
+alltags = true
+show_multi_line_tags = true
