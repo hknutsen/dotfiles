@@ -15,27 +15,3 @@ Contains my [dotfiles](https://dotfiles.github.io) and a bootstrap script to cop
     ```bash
     ./bootstrap.sh
     ```
-
-    Run the bootstrap script without confirmation:
-
-    ```bash
-    ./bootstrap.sh -f
-    ```
-
-    Copy a single given dotfile:
-
-    ```bash
-    ./bootstrap.sh file
-    ```
-
-    Copy multiple given dotfiles:
-
-    ```bash
-    ./bootstrap.sh file1 file2 file3
-    ```
-
-    Copy multiple given dotfiles without confirmation:
-
-    ```bash
-    ./bootstrap.sh -f file1 file2 file3
-    ```
