@@ -12,7 +12,8 @@ config_dir["pipewire"]="$HOME/.config/pipewire"
 # Create symbolic links
 for package in "${!config_dir[@]}"; do
   target_dir="${config_dir[$package]}"
-  stow -v -R -t "$target_dir" "$package"
+  stow -v --adopt -t "$target_dir" "$package"
+  stow -v --restow -t "$target_dir" "$package"
 done
 
 source ~/.bash_profile
