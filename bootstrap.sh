@@ -7,7 +7,7 @@ declare -A config_dir
 config_dir["bash"]="$HOME"
 config_dir["git"]="$HOME"
 config_dir["pipewire"]="$HOME/.config/pipewire"
-# config_dir["quodlibet"]="$HOME/.config/quodlibet"
+config_dir["quodlibet"]="$HOME/.config/quodlibet"
 
 # Create symbolic links
 for package in "${!config_dir[@]}"; do
