@@ -6,6 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 declare -A config_dir
 config_dir["bash"]="$HOME"
 config_dir["git"]="$HOME"
+config_dir["picard"]="$HOME/.config/MusicBrainz"
 config_dir["pipewire"]="$HOME/.config/pipewire"
 config_dir["quodlibet"]="$HOME/.config/quodlibet"
 
