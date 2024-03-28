@@ -12,7 +12,11 @@ config_dir["quodlibet"]="$HOME/.config/quodlibet"
 # Create symbolic links
 for package in "${!config_dir[@]}"; do
   target_dir="${config_dir[$package]}"
+
+  # Adopt existing dotfiles, i.e. move them into this repository
   stow -v --adopt -t "$target_dir" "$package"
+
+  # Restow dotfiles, i.e. recreate symbolic links
   stow -v --restow -t "$target_dir" "$package"
 done
 
